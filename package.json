@@ -1,0 +1,35 @@
+{
+  "name": "react-mail-viewer",
+  "version": "0.0.1",
+  "description": "View Mails",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TakanoriYanagitani/react-mail-viewer.git"
+  },
+  "keywords": [
+    "react",
+    "mail",
+    "email",
+    "viewer",
+    "view",
+    "e-mail",
+    "table",
+    "list",
+    "pager",
+    "pagination",
+    "indexeddb",
+    "csv",
+    "bootstrap",
+    "react-bootstrap-table"
+  ],
+  "author": "Takanori Yanagitani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TakanoriYanagitani/react-mail-viewer/issues"
+  },
+  "homepage": "https://github.com/TakanoriYanagitani/react-mail-viewer#readme"
+}
