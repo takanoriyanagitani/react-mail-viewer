@@ -1,6 +1,6 @@
 {
   "name": "react-mail-viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "View Mails",
   "main": "index.js",
   "scripts": {
@@ -24,12 +24,15 @@
     "indexeddb",
     "csv",
     "bootstrap",
-    "react-bootstrap-table"
+    "react-table"
   ],
   "author": "Takanori Yanagitani",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TakanoriYanagitani/react-mail-viewer/issues"
   },
-  "homepage": "https://github.com/TakanoriYanagitani/react-mail-viewer#readme"
+  "homepage": "https://github.com/TakanoriYanagitani/react-mail-viewer#readme",
+  "dependencies": {
+    "react-table": "6.10.3"
+  }
 }
