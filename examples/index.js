@@ -2,7 +2,7 @@ import { ReactMailViewer } from "../lib/index.js"
 
 class ReactMailViewer__Example1 extends React.PureComponent {
   render(){
-    return React.createElement(Container, {}, [
+    return React.createElement("div", {}, [
       React.createElement(ReactMailViewer, { key: "rmv" }),
     ])
   }
