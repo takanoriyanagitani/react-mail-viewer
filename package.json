@@ -24,6 +24,7 @@
     "indexeddb",
     "csv",
     "bootstrap",
+    "reactstrap",
     "react-table"
   ],
   "author": "Takanori Yanagitani",
