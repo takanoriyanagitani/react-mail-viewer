@@ -4,7 +4,7 @@
   "description": "View Mails",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,14 @@
   },
   "homepage": "https://github.com/TakanoriYanagitani/react-mail-viewer#readme",
   "dependencies": {
+    "react": "16.10.2",
+    "react-dom": "16.10.2"
   },
   "devDependencies": {
+    "chai": "4.2.0",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.15.1",
+    "jest": "24.9.0",
+    "mocha": "6.2.2"
   }
 }
