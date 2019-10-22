@@ -5,6 +5,6 @@ class ReactMailViewer_Ex1 extends React.PureComponent {
 }
 
 ReactDOM.render(
-  document.getElementById("root"),
-  React.createElement(ReactMailViewer_Ex1)
+  React.createElement(ReactMailViewer_Ex1),
+  document.getElementById("root")
 )
