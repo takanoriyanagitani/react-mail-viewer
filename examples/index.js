@@ -11,7 +11,11 @@ class ReactMailViewer_Ex1 extends React.PureComponent {
       2012,
       2011,
     ]
-    return React.createElement("div", {}, React.createElement(ReactMailViewer.Years, { years }))
+    const classNames = {
+      cn_years: "list-group",
+      cn_year:  "list-group-item",
+    }
+    return React.createElement("div", {}, React.createElement(ReactMailViewer.Years, { years, classNames }))
   }
 }
 
