@@ -1,6 +1,8 @@
 language: node_js
 dist: trusty
 
+script: npm run test-with-coverage
+
 matrix:
   include:
     - node_js: "6"
