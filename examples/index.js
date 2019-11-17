@@ -9,26 +9,6 @@ const sample_mail = {
   },
 }
 
-const mail2pairs = ({mail, text2detail, date2detail, content2detail}) => {
-  const {
-    date,
-    from,
-    to,
-    subject,
-    content,
-  } = mail || {}
-  const d2d = date2detail || text2detail
-  const t2d = text2detail
-  const c2d = content2detail
-  return [
-    d2d({term: "Date",    detail: date   }),
-    t2d({term: "From",    detail: from   }),
-    t2d({term: "To",      detail: to     }),
-    t2d({term: "Subject", detail: subject}),
-    c2d({term: "Content", detail: content}),
-  ]
-}
-
 const sample_text2detail = ({term, detail}) => [
   React.createElement("dt", { key: "term"   }, term  ),
   React.createElement("dd", { key: "detail" }, detail),
@@ -47,7 +27,7 @@ const sample_content2detail = ({term, detail}) => [
 class SampleMailViewer extends React.PureComponent {
   render(){
     const { mail } = this.props
-    return React.createElement("dl", {}, mail2pairs({
+    return React.createElement("dl", {}, ReactMailViewer.mail2dl({
       mail,
       text2detail:    sample_text2detail,
       date2detail:    sample_date2detail,
