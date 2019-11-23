@@ -1,3 +1,5 @@
+const assert = require("assert")
+
 const { expect } = require("chai")
 
 const ReactMailViewer = require("../../lib/react-mail-viewer")
@@ -18,6 +20,32 @@ const test = () => {
   describe("load", () => {
     it("loaded",  () => expect(ReactMailViewer && true).to.equal(true))
     it("version", () => expect(ReactMailViewer && ReactMailViewer.version && true).to.equal(true))
+  })
+
+  describe("mails2list", () => {
+    it("full", () => {
+      const mail2child = mail => ({mail})
+      const child2li   = (child, key) => ({child, key})
+      const children2ul = children => children
+      const mails = [
+        { date: "2016/7/16", from: "takanori.yanagitani@gmail.com", to: "takanori.yanagitani@gmail.com", subject: "hw" },
+        { date: "2016/7/17", from: "takanori.yanagitani@gmail.com", to: "takanori.yanagitani@gmail.com", subject: "hw2" },
+      ]
+      assert.deepStrictEqual([], ReactMailViewer.mails2list({mail2child, child2li, children2ul, mails: null}))
+      assert.deepStrictEqual(
+        [
+          {
+            key: 0,
+            child: { mail: { date: "2016/7/16", from: "takanori.yanagitani@gmail.com", to: "takanori.yanagitani@gmail.com", subject: "hw" } },
+          },
+          {
+            key: 1,
+            child: { mail: { date: "2016/7/17", from: "takanori.yanagitani@gmail.com", to: "takanori.yanagitani@gmail.com", subject: "hw2" } },
+          },
+        ],
+        ReactMailViewer.mails2list({mail2child, child2li, children2ul, mails})
+      )
+    })
   })
   
   describe("mail2dl", () => {
@@ -219,7 +247,6 @@ const test = () => {
       ]
       expect(o).to.deep.equal(e)
     })
-
   })
 }
 
