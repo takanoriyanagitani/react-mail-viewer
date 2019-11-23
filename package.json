@@ -1,6 +1,6 @@
 {
   "name": "react-mail-viewer",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "View Mails",
   "main": "index.js",
   "scripts": {
@@ -20,9 +20,7 @@
     "view",
     "e-mail",
     "list",
-    "indexeddb",
-    "bootstrap",
-    "reactstrap"
+    "bootstrap"
   ],
   "author": "Takanori Yanagitani",
   "license": "ISC",
